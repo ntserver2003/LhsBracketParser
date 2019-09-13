@@ -79,6 +79,10 @@ namespace LhsBracketParser
             {
                 ReadOperator();
             }
+            else
+            {
+	            throw new InvalidSytaxException($"Invalid char '{CurrentChar}' at index {CurrentIndex}");
+            }
 
             return CurrentToken;
         }
